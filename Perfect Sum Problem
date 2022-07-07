@@ -35,3 +35,16 @@ class Solution{
 	
 	return dp[n][sum];
 	}
+
+
+
+
+
+
+
+
+Starting the second loop with j=0, instead of j=1, will do the trick.
+As,
+If(arr[i-1] > 0) => dp[i][0] = dp[i-1][0]
+else If(arr[i-1] <= 0) => dp[i][0] = dp[i-1][0] + dp[i-1][0]; and this extra term will lead to extra +1. And this extra +1 will exist whenever arr[i-1] == 0. Thus increasing our answers by 
+no. of zeroes whenever required.
