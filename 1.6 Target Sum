@@ -2,12 +2,13 @@ class Solution {
 public:
     int findTargetSumWays(vector<int>& nums, int target) {
         int sumArray=0;
-        target=abs(target);
-        int cnt=0;
+        target=abs(target);    //absolute value of target
+        int cnt=0;            //counting number of zeroes in nums
         
         for(int i=0;i<nums.size();i++)
         {
             sumArray=sumArray+nums[i];
+            
             if(nums[i]==0)
                 cnt++;
         }
